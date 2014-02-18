@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>2.0</version>
-    <date>2014-02-17T09:05:13Z</date>
+    <date>2014-02-18T08:59:05Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -139,7 +139,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>vm.memory.size[buffer]</key>
+                    <key>vm.memory.size[buffers]</key>
                     <delay>60</delay>
                     <history>15</history>
                     <trends>90</trends>
@@ -3626,7 +3626,7 @@
                     <type>0</type>
                     <item>
                         <host>Template OS Linux_test</host>
-                        <key>vm.memory.size[buffer]</key>
+                        <key>vm.memory.size[buffers]</key>
                     </item>
                 </graph_item>
                 <graph_item>
