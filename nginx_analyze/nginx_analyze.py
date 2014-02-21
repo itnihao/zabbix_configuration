@@ -10,13 +10,13 @@
 '''
 
 # 记录指定时间段内(5分钟内)请求总数， 统计status状态码个数， nginx流量， 字典存储
-# scripts.py log_path parameters 取得结果 
+# in class usages
 
 #######################################################
 # coding begin
 #######################################################
 
-import sys
+import sys, os
 import time, datetime
 
 class nginx_analyze(object):
@@ -68,15 +68,15 @@ class nginx_analyze(object):
 					self.status_dic[st] += 1
 
 		if self.parameters == 'traffic':
-			print self.traffic
+			return self.traffic
 		elif self.parameters == 'requests':
-			print self.requests
+			return self.requests
 		elif self.parameters in self.status_dic:
-			print self.status_dic[self.parameters]
+			return self.status_dic[self.parameters]
 		elif self.status_dic == {}:
-			print 0
+			return 0
 		else:
-			print 0
+			return 0
 			#print 'usages : xxx.py filepath parameters '
 			#print 'parameter like traffic/requests/200/404/...'
 
@@ -94,12 +94,3 @@ class nginx_analyze(object):
 			return True
 		else:
 			return False
-
-
-m = sys.argv[1:]
-if len(m) == 2:
-	ab = nginx_analyze(m[0],m[1])
-	ab.analyze()
-else:
-	print 'parameters number must be two'
-

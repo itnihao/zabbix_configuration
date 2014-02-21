@@ -9,8 +9,8 @@
     </groups>
     <templates>
         <template>
-            <template>Template OS Linux_test</template>
-            <name>Template OS Linux_test</name>
+            <template>Template OS Base</template>
+            <name>Template OS Base</name>
             <groups>
                 <group>
                     <name>Templates</name>
@@ -2350,7 +2350,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template OS Linux_test</host>
+                                        <host>Template OS Base</host>
                                         <key>vfs.dev.read[{#DISKDEV},operations]</key>
                                     </item>
                                 </graph_item>
@@ -2362,7 +2362,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template OS Linux_test</host>
+                                        <host>Template OS Base</host>
                                         <key>vfs.dev.write[{#DISKDEV},operations]</key>
                                     </item>
                                 </graph_item>
@@ -2394,7 +2394,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template OS Linux_test</host>
+                                        <host>Template OS Base</host>
                                         <key>vfs.dev.read[{#DISKDEV},ops,avg1]</key>
                                     </item>
                                 </graph_item>
@@ -2406,7 +2406,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template OS Linux_test</host>
+                                        <host>Template OS Base</host>
                                         <key>vfs.dev.read[{#DISKDEV},ops,avg5]</key>
                                     </item>
                                 </graph_item>
@@ -2418,7 +2418,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template OS Linux_test</host>
+                                        <host>Template OS Base</host>
                                         <key>vfs.dev.read[{#DISKDEV},ops,avg15]</key>
                                     </item>
                                 </graph_item>
@@ -2430,7 +2430,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template OS Linux_test</host>
+                                        <host>Template OS Base</host>
                                         <key>vfs.dev.write[{#DISKDEV},ops,avg1]</key>
                                     </item>
                                 </graph_item>
@@ -2442,7 +2442,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template OS Linux_test</host>
+                                        <host>Template OS Base</host>
                                         <key>vfs.dev.write[{#DISKDEV},ops,avg5]</key>
                                     </item>
                                 </graph_item>
@@ -2454,7 +2454,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template OS Linux_test</host>
+                                        <host>Template OS Base</host>
                                         <key>vfs.dev.write[{#DISKDEV},ops,avg15]</key>
                                     </item>
                                 </graph_item>
@@ -2486,7 +2486,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template OS Linux_test</host>
+                                        <host>Template OS Base</host>
                                         <key>vfs.dev.read[{#DISKDEV},sectors]</key>
                                     </item>
                                 </graph_item>
@@ -2498,7 +2498,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template OS Linux_test</host>
+                                        <host>Template OS Base</host>
                                         <key>vfs.dev.write[{#DISKDEV},sectors]</key>
                                     </item>
                                 </graph_item>
@@ -2530,7 +2530,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template OS Linux_test</host>
+                                        <host>Template OS Base</host>
                                         <key>vfs.dev.read[{#DISKDEV},sps,avg1]</key>
                                     </item>
                                 </graph_item>
@@ -2542,7 +2542,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template OS Linux_test</host>
+                                        <host>Template OS Base</host>
                                         <key>vfs.dev.read[{#DISKDEV},sps,avg5]</key>
                                     </item>
                                 </graph_item>
@@ -2554,7 +2554,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template OS Linux_test</host>
+                                        <host>Template OS Base</host>
                                         <key>vfs.dev.read[{#DISKDEV},sps,avg15]</key>
                                     </item>
                                 </graph_item>
@@ -2566,7 +2566,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template OS Linux_test</host>
+                                        <host>Template OS Base</host>
                                         <key>vfs.dev.write[{#DISKDEV},sps,avg1]</key>
                                     </item>
                                 </graph_item>
@@ -2578,7 +2578,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template OS Linux_test</host>
+                                        <host>Template OS Base</host>
                                         <key>vfs.dev.write[{#DISKDEV},sps,avg5]</key>
                                     </item>
                                 </graph_item>
@@ -2590,7 +2590,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template OS Linux_test</host>
+                                        <host>Template OS Base</host>
                                         <key>vfs.dev.write[{#DISKDEV},sps,avg15]</key>
                                     </item>
                                 </graph_item>
@@ -2841,7 +2841,7 @@
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
-                            <expression>{Template OS Linux_test:vfs.fs.size[{#FSNAME},pfree].last(0)}&lt;20</expression>
+                            <expression>{Template OS Base:vfs.fs.size[{#FSNAME},pfree].last(0)}&lt;20</expression>
                             <name>Free disk space is less than 20% on volume {#FSNAME}</name>
                             <url/>
                             <status>0</status>
@@ -2850,7 +2850,7 @@
                             <type>0</type>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{Template OS Linux_test:vfs.fs.inode[{#FSNAME},pfree].last(0)}&lt;20</expression>
+                            <expression>{Template OS Base:vfs.fs.inode[{#FSNAME},pfree].last(0)}&lt;20</expression>
                             <name>Free inodes is less than 20% on volume {#FSNAME}</name>
                             <url/>
                             <status>0</status>
@@ -2886,7 +2886,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>2</type>
                                     <item>
-                                        <host>Template OS Linux_test</host>
+                                        <host>Template OS Base</host>
                                         <key>vfs.fs.size[{#FSNAME},total]</key>
                                     </item>
                                 </graph_item>
@@ -2898,7 +2898,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template OS Linux_test</host>
+                                        <host>Template OS Base</host>
                                         <key>vfs.fs.size[{#FSNAME},free]</key>
                                     </item>
                                 </graph_item>
@@ -3049,7 +3049,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template OS Linux_test</host>
+                                        <host>Template OS Base</host>
                                         <key>net.if.in[{#IFNAME}]</key>
                                     </item>
                                 </graph_item>
@@ -3061,7 +3061,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Template OS Linux_test</host>
+                                        <host>Template OS Base</host>
                                         <key>net.if.out[{#IFNAME}]</key>
                                     </item>
                                 </graph_item>
@@ -3100,7 +3100,7 @@
                             <sort_triggers>0</sort_triggers>
                             <resource>
                                 <name>CPU load</name>
-                                <host>Template OS Linux_test</host>
+                                <host>Template OS Base</host>
                             </resource>
                             <application/>
                         </screen_item>
@@ -3121,7 +3121,7 @@
                             <sort_triggers>0</sort_triggers>
                             <resource>
                                 <name>CPU utilization</name>
-                                <host>Template OS Linux_test</host>
+                                <host>Template OS Base</host>
                             </resource>
                             <application/>
                         </screen_item>
@@ -3142,7 +3142,7 @@
                             <sort_triggers>0</sort_triggers>
                             <resource>
                                 <name>Memory usage</name>
-                                <host>Template OS Linux_test</host>
+                                <host>Template OS Base</host>
                             </resource>
                             <application/>
                         </screen_item>
@@ -3163,7 +3163,7 @@
                             <sort_triggers>0</sort_triggers>
                             <resource>
                                 <name>Swap usage</name>
-                                <host>Template OS Linux_test</host>
+                                <host>Template OS Base</host>
                             </resource>
                             <application/>
                         </screen_item>
@@ -3184,7 +3184,7 @@
                             <sort_triggers>0</sort_triggers>
                             <resource>
                                 <key>proc.num[]</key>
-                                <host>Template OS Linux_test</host>
+                                <host>Template OS Base</host>
                             </resource>
                             <application/>
                         </screen_item>
@@ -3205,7 +3205,7 @@
                             <sort_triggers>0</sort_triggers>
                             <resource>
                                 <key>proc.num[,,run]</key>
-                                <host>Template OS Linux_test</host>
+                                <host>Template OS Base</host>
                             </resource>
                             <application/>
                         </screen_item>
@@ -3216,7 +3216,7 @@
     </templates>
     <triggers>
         <trigger>
-            <expression>{Template OS Linux_test:vfs.file.cksum[/etc/passwd].diff(0)}&gt;0</expression>
+            <expression>{Template OS Base:vfs.file.cksum[/etc/passwd].diff(0)}&gt;0</expression>
             <name>/etc/passwd has been changed on {HOST.NAME}</name>
             <url/>
             <status>0</status>
@@ -3226,7 +3226,7 @@
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Template OS Linux_test:kernel.maxfiles.last(0)}&lt;1024</expression>
+            <expression>{Template OS Base:kernel.maxfiles.last(0)}&lt;1024</expression>
             <name>Configured max number of opened files is too low on {HOST.NAME}</name>
             <url/>
             <status>0</status>
@@ -3236,7 +3236,7 @@
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Template OS Linux_test:kernel.maxproc.last(0)}&lt;256</expression>
+            <expression>{Template OS Base:kernel.maxproc.last(0)}&lt;256</expression>
             <name>Configured max number of processes is too low on {HOST.NAME}</name>
             <url/>
             <status>0</status>
@@ -3246,7 +3246,7 @@
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Template OS Linux_test:system.cpu.util[,iowait].avg(5m)}&gt;20</expression>
+            <expression>{Template OS Base:system.cpu.util[,iowait].avg(5m)}&gt;20</expression>
             <name>Disk I/O is overloaded on {HOST.NAME}</name>
             <url/>
             <status>0</status>
@@ -3256,7 +3256,7 @@
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Template OS Linux_test:system.uname.diff(0)}&gt;0</expression>
+            <expression>{Template OS Base:system.uname.diff(0)}&gt;0</expression>
             <name>Host information was changed on {HOST.NAME}</name>
             <url/>
             <status>0</status>
@@ -3266,7 +3266,7 @@
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Template OS Linux_test:system.hostname.diff(0)}&gt;0</expression>
+            <expression>{Template OS Base:system.hostname.diff(0)}&gt;0</expression>
             <name>Hostname was changed on {HOST.NAME}</name>
             <url/>
             <status>0</status>
@@ -3276,7 +3276,7 @@
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Template OS Linux_test:vm.memory.size[available].last(0)}&lt;20M</expression>
+            <expression>{Template OS Base:vm.memory.size[available].last(0)}&lt;20M</expression>
             <name>Lack of available memory on server {HOST.NAME}</name>
             <url/>
             <status>0</status>
@@ -3286,7 +3286,7 @@
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Template OS Linux_test:system.swap.size[,pfree].last(0)}&lt;50</expression>
+            <expression>{Template OS Base:system.swap.size[,pfree].last(0)}&lt;50</expression>
             <name>Lack of free swap space on {HOST.NAME}</name>
             <url/>
             <status>0</status>
@@ -3296,7 +3296,7 @@
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Template OS Linux_test:system.cpu.load[percpu,avg1].avg(5m)}&gt;5</expression>
+            <expression>{Template OS Base:system.cpu.load[percpu,avg1].avg(5m)}&gt;5</expression>
             <name>Processor load is too high on {HOST.NAME}</name>
             <url/>
             <status>0</status>
@@ -3306,7 +3306,7 @@
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Template OS Linux_test:proc.num[,,zomb].avg(5m)}&gt;1</expression>
+            <expression>{Template OS Base:proc.num[,,zomb].avg(5m)}&gt;1</expression>
             <name>There is too many processes zomb on {HOST.NAME}</name>
             <url/>
             <status>0</status>
@@ -3316,7 +3316,7 @@
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Template OS Linux_test:proc.num[].avg(5m)}&gt;350</expression>
+            <expression>{Template OS Base:proc.num[].avg(5m)}&gt;350</expression>
             <name>Too many processes on {HOST.NAME}</name>
             <url/>
             <status>0</status>
@@ -3326,7 +3326,7 @@
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Template OS Linux_test:proc.num[,,run].avg(5m)}&gt;30</expression>
+            <expression>{Template OS Base:proc.num[,,run].avg(5m)}&gt;30</expression>
             <name>Too many processes running on {HOST.NAME}</name>
             <url/>
             <status>0</status>
@@ -3336,7 +3336,7 @@
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Template OS Linux_test:system.uptime.change(0)}&lt;0</expression>
+            <expression>{Template OS Base:system.uptime.change(0)}&lt;0</expression>
             <name>{HOST.NAME} has just been restarted</name>
             <url/>
             <status>0</status>
@@ -3373,7 +3373,7 @@
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Template OS Linux_test</host>
+                        <host>Template OS Base</host>
                         <key>system.cpu.switches</key>
                     </item>
                 </graph_item>
@@ -3385,7 +3385,7 @@
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Template OS Linux_test</host>
+                        <host>Template OS Base</host>
                         <key>system.cpu.intr</key>
                     </item>
                 </graph_item>
@@ -3417,7 +3417,7 @@
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Template OS Linux_test</host>
+                        <host>Template OS Base</host>
                         <key>system.cpu.load[percpu,avg1]</key>
                     </item>
                 </graph_item>
@@ -3429,7 +3429,7 @@
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Template OS Linux_test</host>
+                        <host>Template OS Base</host>
                         <key>system.cpu.load[percpu,avg5]</key>
                     </item>
                 </graph_item>
@@ -3441,7 +3441,7 @@
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Template OS Linux_test</host>
+                        <host>Template OS Base</host>
                         <key>system.cpu.load[percpu,avg15]</key>
                     </item>
                 </graph_item>
@@ -3473,7 +3473,7 @@
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Template OS Linux_test</host>
+                        <host>Template OS Base</host>
                         <key>system.cpu.util[,steal]</key>
                     </item>
                 </graph_item>
@@ -3485,7 +3485,7 @@
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Template OS Linux_test</host>
+                        <host>Template OS Base</host>
                         <key>system.cpu.util[,softirq]</key>
                     </item>
                 </graph_item>
@@ -3497,7 +3497,7 @@
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Template OS Linux_test</host>
+                        <host>Template OS Base</host>
                         <key>system.cpu.util[,interrupt]</key>
                     </item>
                 </graph_item>
@@ -3509,7 +3509,7 @@
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Template OS Linux_test</host>
+                        <host>Template OS Base</host>
                         <key>system.cpu.util[,nice]</key>
                     </item>
                 </graph_item>
@@ -3521,7 +3521,7 @@
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Template OS Linux_test</host>
+                        <host>Template OS Base</host>
                         <key>system.cpu.util[,iowait]</key>
                     </item>
                 </graph_item>
@@ -3533,7 +3533,7 @@
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Template OS Linux_test</host>
+                        <host>Template OS Base</host>
                         <key>system.cpu.util[,system]</key>
                     </item>
                 </graph_item>
@@ -3545,7 +3545,7 @@
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Template OS Linux_test</host>
+                        <host>Template OS Base</host>
                         <key>system.cpu.util[,user]</key>
                     </item>
                 </graph_item>
@@ -3557,7 +3557,7 @@
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Template OS Linux_test</host>
+                        <host>Template OS Base</host>
                         <key>system.cpu.util[,idle]</key>
                     </item>
                 </graph_item>
@@ -3589,7 +3589,7 @@
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Template OS Linux_test</host>
+                        <host>Template OS Base</host>
                         <key>vm.memory.size[available]</key>
                     </item>
                 </graph_item>
@@ -3601,7 +3601,7 @@
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Template OS Linux_test</host>
+                        <host>Template OS Base</host>
                         <key>vm.memory.size[total]</key>
                     </item>
                 </graph_item>
@@ -3613,7 +3613,7 @@
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Template OS Linux_test</host>
+                        <host>Template OS Base</host>
                         <key>vm.memory.size[used]</key>
                     </item>
                 </graph_item>
@@ -3625,7 +3625,7 @@
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Template OS Linux_test</host>
+                        <host>Template OS Base</host>
                         <key>vm.memory.size[buffers]</key>
                     </item>
                 </graph_item>
@@ -3637,7 +3637,7 @@
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Template OS Linux_test</host>
+                        <host>Template OS Base</host>
                         <key>vm.memory.size[cached]</key>
                     </item>
                 </graph_item>
@@ -3669,7 +3669,7 @@
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Template OS Linux_test</host>
+                        <host>Template OS Base</host>
                         <key>proc.num[]</key>
                     </item>
                 </graph_item>
@@ -3681,7 +3681,7 @@
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Template OS Linux_test</host>
+                        <host>Template OS Base</host>
                         <key>proc.num[,,run]</key>
                     </item>
                 </graph_item>
@@ -3693,7 +3693,7 @@
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Template OS Linux_test</host>
+                        <host>Template OS Base</host>
                         <key>proc.num[,,zomb]</key>
                     </item>
                 </graph_item>
@@ -3725,7 +3725,7 @@
                     <calc_fnc>2</calc_fnc>
                     <type>2</type>
                     <item>
-                        <host>Template OS Linux_test</host>
+                        <host>Template OS Base</host>
                         <key>system.swap.size[,total]</key>
                     </item>
                 </graph_item>
@@ -3737,7 +3737,7 @@
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Template OS Linux_test</host>
+                        <host>Template OS Base</host>
                         <key>system.swap.size[,free]</key>
                     </item>
                 </graph_item>

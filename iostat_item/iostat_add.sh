@@ -33,5 +33,5 @@ EOF
 
 pkill zabbix_agentd
 $zabbix_path/sbin/zabbix_agentd 
-
+chown -R zabbix.zabbix $zabbix_path
 chmod +x $zabbix_path/libexec/discover_disk.pl
