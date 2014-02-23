@@ -29,25 +29,32 @@ Out[20]: [['listen', '80', 'default;']]
 
 # read the nginx configuration
 def conf_list_ana(key, line_read):
-	return [temp.split() for temp in line_read if key in temp.split()][0]
+	return [temp.split() for temp in line_read if key in temp.split()]
 
 
 for file in file_list:
 	index_temp = open(os.path.join(nginx_etc_path,file),'r').read().split('\n')
 	index = [temp for temp in index_temp if '#' not in temp]
 
-	if 'access_log' in index:
-		access_log = conf_list_ana('access_log', index)[1].replace(';','')
+	a = conf_list_ana('access_log', index)
+	s = conf_list_ana('server_name', index)
+	l = conf_list_ana('listen', index)
+
+	if a != []:
+		if 'access_log' in a[0]:
+			access_log = a[0][1].replace(';','')
 	else:
 		access_log = 'null'
 
-	if 'server_name' in index:
-		server_name = conf_list_ana('server_name', index)[1].replace(';','')
+	if s != []:
+		if 'server_name' in s[0]:
+			server_name = s[0][1].replace(';','')
 	else:
 		server_name = 'null'
 
-	if 'listen' in index:
-		listen_port = conf_list_ana('listen', index)[1].replace(';','')
+	if l != []:
+		if 'listen' in l[0]:
+			listen_port = l[0][1].replace(';','')
 	else:
 		listen_port = 'null'
 
