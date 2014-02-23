@@ -31,6 +31,9 @@ Out[20]: [['listen', '80', 'default;']]
 def conf_list_ana(key, line_read):
 	return [temp.split() for temp in line_read if key in temp.split()]
 
+def etc_parse(file, key_word):
+
+
 
 for file in file_list:
 	index_temp = open(os.path.join(nginx_etc_path,file),'r').read().split('\n')
