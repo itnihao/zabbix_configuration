@@ -1,7 +1,7 @@
 #!/bin/sh
 #export LD_LIBRARY_PATH='/data/lnmp/monitor_tools/app/mysql/lib:/data/lnmp/cur/lib:/usr/local/app/locale/libxml2/lib'
 
-zabbix_path='/usr/local/monitor_tools/app/zabbix'
+zabbix_path='/usr/local/monitor_tools/app/zabbix_agent'
 
 mkdir $zabbix_path/libexec -p
 
