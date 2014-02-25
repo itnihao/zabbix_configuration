@@ -1,5 +1,5 @@
 #!/bin/sh
-
+export LD_LIBRARY_PATH='/data/lnmp/monitor_tools/app/mysql/lib:/data/lnmp/cur/lib:/usr/local/app/locale/libxml2/lib'
 mkdir /data/lnmp/monitor_tools/app -p
 mkdir /data/lnmp/monitor_tools/tar_package -p
 

@@ -3,7 +3,7 @@ UserParameter=nginx.statistics.200[*],python /usr/local/monitor_tools/app/zabbix
 UserParameter=nginx.statistics.404[*],python /usr/local/monitor_tools/app/zabbix/libexec/nginx.py $1 404
 UserParameter=nginx.requests[*],python /usr/local/monitor_tools/app/zabbix/libexec/nginx.py $1 requests
 UserParameter=nginx.traffic[*],python /usr/local/monitor_tools/app/zabbix/libexec/nginx.py $1 traffic
-UserParameter=nginx.sites.discovery_python,/usr/local/monitor_tools/app/zabbix/libexec/nginx_site_discovery.py
+UserParameter=nginx.sites.discovery_python,/data/lnmp/Python-2.7.3/python /usr/local/monitor_tools/app/zabbix/libexec/nginx_site_discovery.py
 
 # zabbix nginx total requests , total status statistics and total traffic
 UserParameter=nginx.total.200,/usr/local/monitor_tools/app/zabbix/libexec/nginx_total_analyze.py 200
