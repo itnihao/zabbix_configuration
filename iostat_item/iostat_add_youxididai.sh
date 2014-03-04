@@ -1,7 +1,7 @@
 #!/bin/sh
 #export LD_LIBRARY_PATH='/data/lnmp/monitor_tools/app/mysql/lib:/data/lnmp/cur/lib:/usr/local/app/locale/libxml2/lib'
 
-zabbix_path='/usr/local/monitor_tools/app/zabbix_agent'
+zabbix_path='/data/lnmp/monitor_tools/app/zabbix_agent'
 
 
 cat > $zabbix_path/etc/zabbix_agentd.conf.d/iostat.conf <<EOF
@@ -16,4 +16,4 @@ EOF
 
 pkill zabbix_agentd
 $zabbix_path/sbin/zabbix_agentd 
-chown -R zabbix.zabbix $zabbix_path
+
