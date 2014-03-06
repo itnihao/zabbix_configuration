@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>2.0</version>
-    <date>2014-02-27T09:02:17Z</date>
+    <date>2014-03-06T01:55:09Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -360,7 +360,7 @@
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
+                            <delta>2</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -1607,7 +1607,7 @@
                             <valuemap/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Memcache {#MEM_PORT}  Total connections opened since service up per second</name>
+                            <name>Memcache {#MEM_PORT}  Total connections opened since service up</name>
                             <type>0</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
@@ -1620,7 +1620,7 @@
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>1</delta>
+                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -2214,7 +2214,7 @@
                             </graph_items>
                         </graph_prototype>
                         <graph_prototype>
-                            <name>Memcache {#MEM_PORT} Connections status per seconds</name>
+                            <name>Memcache {#MEM_PORT} Connections status</name>
                             <width>900</width>
                             <height>200</height>
                             <yaxismin>0.0000</yaxismin>
