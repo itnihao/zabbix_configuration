@@ -27,36 +27,30 @@ In [20]: listen_port
 Out[20]: [['listen', '80', 'default;']]
 '''
 
-# read the nginx configuration
-def conf_list_ana(key, line_read):
-	return [temp.split() for temp in line_read if key in temp.split()]
+class conf_parse(object):
+
+	def __init__(self, infile_path, infile, keyword):
+		self.infile_path = infile_path
+		self.infile = infile
+		self.keyword = keyword
+
+
+	def procedure(self):
+		read_list = open(os.path.join(self.infile_path, self.infile), 'r').read().split('\n')
+		mid_list = [test for test in read_list if not test.startswith('#') and test != '']
+
+		result = [test.split() for test in mid_list if self.keyword in test.split()]
+
+		if result != []:
+			return result[0][1].replace(';', '')
+		else:
+			return 'null'
 
 
 for file in file_list:
-	index_temp = open(os.path.join(nginx_etc_path,file),'r').read().split('\n')
-	index = [temp for temp in index_temp if '#' not in temp]
-
-	a = conf_list_ana('access_log', index)
-	s = conf_list_ana('server_name', index)
-	l = conf_list_ana('listen', index)
-
-	if a != []:
-		if 'access_log' in a[0]:
-			access_log = a[0][1].replace(';','')
-	else:
-		access_log = 'null'
-
-	if s != []:
-		if 'server_name' in s[0]:
-			server_name = s[0][1].replace(';','')
-	else:
-		server_name = 'null'
-
-	if l != []:
-		if 'listen' in l[0]:
-			listen_port = l[0][1].replace(';','')
-	else:
-		listen_port = 'null'
+	access_log = conf_parse(nginx_etc_path, file, 'access_log')
+	server_name = conf_parse(nginx_etc_path, file, 'server_name')
+	listen_port = conf_parse(nginx_etc_path, file, 'listen')
 
 	dic_content = {
 	"{#ACCESS_LOG}":  access_log,
