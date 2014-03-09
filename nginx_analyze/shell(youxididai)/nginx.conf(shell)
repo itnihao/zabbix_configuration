@@ -1,0 +1,12 @@
+# zabbix LLD scripts about site self
+UserParameter=nginx.statistics.200[*],/usr/local/monitor_tools/app/zabbix/libexec/nginx_log_parser.sh $1 200
+UserParameter=nginx.statistics.404[*],/usr/local/monitor_tools/app/zabbix/libexec/nginx_log_parser.sh $1 404
+UserParameter=nginx.requests[*],/usr/local/monitor_tools/app/zabbix/libexec/nginx_log_parser.sh $1 requests
+UserParameter=nginx.traffic[*],/usr/local/monitor_tools/app/zabbix/libexec/nginx_log_parser.sh $1 traffic
+UserParameter=nginx.sites.discovery_python,/data/lnmp/Python-2.7.3/python /usr/local/monitor_tools/app/zabbix/libexec/nginx_site_discovery.py
+
+# zabbix nginx total requests , total status statistics and total traffic
+UserParameter=nginx.total.200,/usr/local/monitor_tools/app/zabbix/libexec/nginx_total_analyze.sh 200
+UserParameter=nginx.total.404,/usr/local/monitor_tools/app/zabbix/libexec/nginx_total_analyze.sh 404
+UserParameter=nginx.total.traffic,/usr/local/monitor_tools/app/zabbix/libexec/nginx_total_analyze.sh traffic
+UserParameter=nginx.total.requests,/usr/local/monitor_tools/app/zabbix/libexec/nginx_total_analyze.sh requests
