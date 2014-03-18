@@ -1,0 +1,11 @@
+UserParameter=nginx.statistics.200[*],/data/lnmp/monitor_tools/app/zabbix_agent/libexec/nginx_log_parser.sh $1 200
+UserParameter=nginx.statistics.404[*],/data/lnmp/monitor_tools/app/zabbix_agent/libexec/nginx_log_parser.sh $1 404
+UserParameter=nginx.requests[*],/data/lnmp/monitor_tools/app/zabbix_agent/libexec/nginx_log_parser.sh $1 requests
+UserParameter=nginx.traffic[*],/data/lnmp/monitor_tools/app/zabbix_agent/libexec/nginx_log_parser.sh $1 traffic
+UserParameter=nginx.sites.discovery_python,/data/lnmp/Python-2.7.3/python /data/lnmp/monitor_tools/app/zabbix_agent/libexec/nginx_site_discovery.py
+
+# zabbix nginx total requests , total status statistics and total traffic
+UserParameter=nginx.total.200,/data/lnmp/monitor_tools/app/zabbix_agent/libexec/nginx_total_analyze.sh 200
+UserParameter=nginx.total.404,/data/lnmp/monitor_tools/app/zabbix_agent/libexec/nginx_total_analyze.sh 404
+UserParameter=nginx.total.traffic,/data/lnmp/monitor_tools/app/zabbix_agent/libexec/nginx_total_analyze.sh traffic
+UserParameter=nginx.total.requests,/data/lnmp/Python-2.7.3/python /data/lnmp/monitor_tools/app/zabbix_agent/libexec/nginx_total_request.py

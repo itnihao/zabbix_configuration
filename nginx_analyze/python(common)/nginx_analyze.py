@@ -55,8 +55,15 @@ class nginx_analyze(object):
 		status is line.split('"')[2].split()[0], 
 		traffic is line.split('"')[2].split()[1]
 		'''
-		for line in open(self.filepath,'r'):
-			if self._time_process(line):
+
+		now = datetime.datetime.now()
+		timedelta = datetime.timedelta(minutes=5)
+		f = open(self.filepath,'r')
+		while True:
+			line = f.readline()
+			if len(line) == 0:
+				break
+			if now - self._time_process(line) <= timedelta:
 				temp = line.split('"')[2].split()
 				self.traffic += int(temp[1])
 				self.requests += 1
@@ -66,7 +73,7 @@ class nginx_analyze(object):
 					self.status_dic[st] = 1
 				else:
 					self.status_dic[st] += 1
-
+		f.close()
 		if self.parameters == 'traffic':
 			return self.traffic
 		elif self.parameters == 'requests':
@@ -83,14 +90,11 @@ class nginx_analyze(object):
 
 
 	def _time_process(self, line):
-		now = datetime.datetime.now()
-		timedelta = datetime.timedelta(minutes=5)
-		
+		'''
+		'''
 		timestr = line.split('[')[1].split()[0]
 		times_temp = time.strptime(timestr,  '%d/%b/%Y:%H:%M:%S')
 		timestamp = datetime.datetime(times_temp[0], times_temp[1], times_temp[2], times_temp[3], times_temp[4], times_temp[5])
+		return timestamp
 
-		if  now - timestamp <= timedelta:
-			return True
-		else:
-			return False
+		
