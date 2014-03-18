@@ -51,8 +51,9 @@ results = 0
 for file in file_list:
     index = open(os.path.join(nginx_etc_path, file), 'r').read().split('\n')
     access_log = conf_list_ana('access_log', index)[1].replace(';', '')
-    
+    #print os.path.join(nginx_base, access_log)
     ab = log_analyze(os.path.join(nginx_base, access_log))
+    #print ab
     results += ab
     
 print results
