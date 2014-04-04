@@ -24,7 +24,7 @@
 
 
 SERVICE="Zabbix agent"
-BASEDIR=/data/lnmp/monitor_tools/app/zabbix
+BASEDIR=/usr/local/monitor_tools/app/zabbix_agent
 DAEMON=${BASEDIR}/sbin/zabbix_agentd
 PIDFILE=${BASEDIR}/log/zabbix_agentd.pid
 ZABBIX_AGENTD=$BASEDIR/sbin/zabbix_agentd

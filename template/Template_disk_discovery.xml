@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>2.0</version>
-    <date>2014-03-04T05:52:43Z</date>
+    <date>2014-04-04T05:40:24Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -66,7 +66,7 @@
                             <value_type>0</value_type>
                             <allowed_hosts/>
                             <units>%</units>
-                            <delta>1</delta>
+                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -76,7 +76,7 @@
                             <snmpv3_privpassphrase/>
                             <formula>1</formula>
                             <delay_flex/>
-                            <params>100*last(&quot;custom.vfs.dev.io.ms[{#DISK}]&quot;,0)/1000</params>
+                            <params>100*last(&quot;custom.vfs.dev.io.ms[{#DISK}]&quot;,0)/1000/60</params>
                             <ipmi_sensor/>
                             <data_type>0</data_type>
                             <authtype>0</authtype>
@@ -174,8 +174,8 @@ This field cannot exceed 100% unless there is a rounding error, but it is a comm
                             <publickey/>
                             <privatekey/>
                             <port/>
-                            <description>Field 10 -- # of milliseconds spent doing I/Os&#13;
-    This field increases so long as field 9 is nonzero.</description>
+                            <description>Field 13 -- # of milliseconds spent doing I/Os&#13;
+    This field increases so long as field 12 is nonzero.</description>
                             <inventory_link>0</inventory_link>
                             <applications>
                                 <application>
@@ -1349,6 +1349,50 @@ delta[field8] / delta[time]</description>
                             </graph_items>
                         </graph_prototype>
                         <graph_prototype>
+                            <name>Disk {#DISKDEV} read/write merge percent</name>
+                            <width>900</width>
+                            <height>200</height>
+                            <yaxismin>0.0000</yaxismin>
+                            <yaxismax>100.0000</yaxismax>
+                            <show_work_period>1</show_work_period>
+                            <show_triggers>1</show_triggers>
+                            <type>0</type>
+                            <show_legend>1</show_legend>
+                            <show_3d>0</show_3d>
+                            <percent_left>0.0000</percent_left>
+                            <percent_right>0.0000</percent_right>
+                            <ymin_type_1>0</ymin_type_1>
+                            <ymax_type_1>0</ymax_type_1>
+                            <ymin_item_1>0</ymin_item_1>
+                            <ymax_item_1>0</ymax_item_1>
+                            <graph_items>
+                                <graph_item>
+                                    <sortorder>0</sortorder>
+                                    <drawtype>5</drawtype>
+                                    <color>00CC00</color>
+                                    <yaxisside>0</yaxisside>
+                                    <calc_fnc>2</calc_fnc>
+                                    <type>0</type>
+                                    <item>
+                                        <host>JofSoft Linux disk autodiscovery_fix</host>
+                                        <key>custom.vfs.dev.rd_mrg.percent[{#DISK}]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>1</sortorder>
+                                    <drawtype>5</drawtype>
+                                    <color>0000CC</color>
+                                    <yaxisside>0</yaxisside>
+                                    <calc_fnc>2</calc_fnc>
+                                    <type>0</type>
+                                    <item>
+                                        <host>JofSoft Linux disk autodiscovery_fix</host>
+                                        <key>custom.vfs.dev.wr_mrg.percent[{#DISK}]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                        <graph_prototype>
                             <name>Disk {#DISKDEV} read/write response time</name>
                             <width>900</width>
                             <height>200</height>
@@ -1437,18 +1481,6 @@ delta[field8] / delta[time]</description>
                                 <graph_item>
                                     <sortorder>2</sortorder>
                                     <drawtype>5</drawtype>
-                                    <color>33FFFF</color>
-                                    <yaxisside>0</yaxisside>
-                                    <calc_fnc>2</calc_fnc>
-                                    <type>0</type>
-                                    <item>
-                                        <host>JofSoft Linux disk autodiscovery_fix</host>
-                                        <key>custom.vfs.dev.rd_mrg.percent[{#DISK}]</key>
-                                    </item>
-                                </graph_item>
-                                <graph_item>
-                                    <sortorder>3</sortorder>
-                                    <drawtype>5</drawtype>
                                     <color>CC0033</color>
                                     <yaxisside>0</yaxisside>
                                     <calc_fnc>2</calc_fnc>
@@ -1459,7 +1491,7 @@ delta[field8] / delta[time]</description>
                                     </item>
                                 </graph_item>
                                 <graph_item>
-                                    <sortorder>4</sortorder>
+                                    <sortorder>3</sortorder>
                                     <drawtype>5</drawtype>
                                     <color>CC0099</color>
                                     <yaxisside>0</yaxisside>
@@ -1468,18 +1500,6 @@ delta[field8] / delta[time]</description>
                                     <item>
                                         <host>JofSoft Linux disk autodiscovery_fix</host>
                                         <key>custom.vfs.dev.write_merge[{#DISK}]</key>
-                                    </item>
-                                </graph_item>
-                                <graph_item>
-                                    <sortorder>5</sortorder>
-                                    <drawtype>5</drawtype>
-                                    <color>CC66FF</color>
-                                    <yaxisside>0</yaxisside>
-                                    <calc_fnc>2</calc_fnc>
-                                    <type>0</type>
-                                    <item>
-                                        <host>JofSoft Linux disk autodiscovery_fix</host>
-                                        <key>custom.vfs.dev.wr_mrg.percent[{#DISK}]</key>
                                     </item>
                                 </graph_item>
                             </graph_items>
