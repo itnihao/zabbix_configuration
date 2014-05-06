@@ -1,6 +1,6 @@
 #!/bin/sh
-#chkconfig: 345 95 95
-#description:Zabbix agent
+# chkconfig: 345 95 95
+# description:Zabbix server
 # Zabbix
 # Copyright (C) 2001-2013 Zabbix SIA
 #
@@ -19,7 +19,7 @@
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
 
 
-# Start/Stop the Zabbix agent daemon.
+# Start/Stop the Zabbix server daemon.
 # Place a startup script in /sbin/init.d, and link to it from /sbin/rc[023].d
 
 # Source function library
@@ -31,17 +31,17 @@
 # Check that networking is up.
 [ "$NETWORKING" = "no" ] && exit 0
 
-zabbix_agentd='/usr/local/zabbix/sbin/zabbix_agentd'
-prog=$(basename $zabbix_agentd)
-zabbix_server_conf='/usr/local/zabbix/etc/zabbix_agentd.conf'
+zabbix_server='/usr/local/zabbix/sbin/zabbix_server'
+prog=$(basename $zabbix_server)
+zabbix_server_conf='/usr/local/zabbix/etc/zabbix_server.conf'
 
-lockfile=/var/lock/subsys/zabbix_agentd
+lockfile=/var/lock/subsys/zabbix_server
 
 start() {
-	[ -x $zabbix_agentd ] || exit 5
-	[ -f $zabbix_agentd_conf ] || exit 6
+	[ -x $zabbix_server ] || exit 5
+	[ -f $zabbix_server_conf ] || exit 6
 	echo -n $"Starting $prog: "
-	$zabbix_agentd
+	$zabbix_server 
 	retval=$?
 	echo 
 	[ $retval -eq 0 ] && touch $lockfile 
@@ -71,7 +71,7 @@ case $1 in
 	$0 start
 ;;
 'status')
-	status zabbix_agentd
+	status zabbix_server
 ;;
 *)
 	echo "Usage: $0 start|stop|restart"
