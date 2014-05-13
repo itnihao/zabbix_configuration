@@ -17,7 +17,7 @@ for conf in conf_file:
 			conf_port_list.append(line.split('=')[1].strip())
 
 
-net_cmd = '''netstat -nltup|grep mongod|awk '{print $4}'
+net_cmd = '''netstat -nltu|awk '{print $4}'
 '''
 
 p = subprocess.Popen(net_cmd, shell=True, stdout=subprocess.PIPE)
@@ -27,7 +27,7 @@ net_result = p.stdout.readlines()
 
 for port in conf_port_list:
 	for net in net_result:
-		if port in net:
+		if port.strip() in net:
 			port_list.append(port)
 
 json_data = {"data": []}
