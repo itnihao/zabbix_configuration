@@ -9,15 +9,24 @@ mem_cmd = '''ps -ef|grep memcache|grep -v 'grep'|awk -F"-p" '{print $2}'|awk '{p
 
 json_data = {"data": []}
 
-p = subprocess.Popen(mem_cmd, shell=True, stdout=subprocess.PIPE)
-port_list = p.stdout.readlines()
+def os_cmd(command):
+	p = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
+	return p.stdout.readlines()
+
+port_list = os_cmd(mem_cmd)
+net_result = os_cmd('netstat -nlt')
 
 for port in port_list:
-        dic_content = {
-        "{#MEM_PORT}":  port.strip()
-        }
+	for net in net_result:
+		if port.strip() in net:
+			ipaddr = net.split()[3].split(':')[0]
+        
+	dic_content = {
+	"{#MEM_PORT}":  port.strip(),
+	"{#MEM_IPADDR}": ipaddr
+	}
 
-        json_data['data'].append(dic_content)
+	json_data['data'].append(dic_content)
 
 result = json.dumps(json_data)
 print result
