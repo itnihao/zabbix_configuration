@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>2.0</version>
-    <date>2014-05-12T08:14:51Z</date>
+    <date>2014-07-14T02:56:14Z</date>
     <groups>
         <group>
             <name>MongoDB Moniting</name>
@@ -56,7 +56,7 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>mongodb_port_discovery</key>
-                    <delay>60</delay>
+                    <delay>7200</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -85,7 +85,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>mongodb_stats[{#MONGO_PORT},asserts, rollovers]</key>
+                            <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT},asserts, rollovers]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>30</trends>
@@ -127,7 +127,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>mongodb_stats[{#MONGO_PORT},asserts, msg]</key>
+                            <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT},asserts, msg]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>30</trends>
@@ -169,7 +169,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>mongodb_stats[{#MONGO_PORT},asserts, regular]</key>
+                            <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT},asserts, regular]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>30</trends>
@@ -211,7 +211,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>mongodb_stats[{#MONGO_PORT},asserts, user]</key>
+                            <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT},asserts, user]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>30</trends>
@@ -253,7 +253,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>mongodb_stats[{#MONGO_PORT},asserts, warning]</key>
+                            <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT},asserts, warning]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>30</trends>
@@ -295,7 +295,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>mongodb_stats[{#MONGO_PORT},backgroundFlushing, average_ms]</key>
+                            <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT},backgroundFlushing, average_ms]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>30</trends>
@@ -337,7 +337,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>mongodb_stats[{#MONGO_PORT},backgroundFlushing, last_ms]</key>
+                            <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT},backgroundFlushing, last_ms]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>30</trends>
@@ -379,7 +379,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>mongodb_stats[{#MONGO_PORT},backgroundFlushing, flushes]</key>
+                            <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT},backgroundFlushing, flushes]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>30</trends>
@@ -421,7 +421,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>mongodb_stats[{#MONGO_PORT},backgroundFlushing, total_ms]</key>
+                            <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT},backgroundFlushing, total_ms]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>30</trends>
@@ -463,7 +463,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>mongodb_stats[{#MONGO_PORT}, connections, available]</key>
+                            <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT}, connections, available]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>30</trends>
@@ -505,7 +505,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>mongodb_stats[{#MONGO_PORT}, connections, current]</key>
+                            <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT}, connections, current]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>30</trends>
@@ -547,7 +547,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>mongodb_stats[{#MONGO_PORT},cursors, clientCursors_size]</key>
+                            <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT},cursors, clientCursors_size]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>30</trends>
@@ -589,7 +589,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>mongodb_stats[{#MONGO_PORT},cursors, timedOut]</key>
+                            <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT},cursors, timedOut]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>30</trends>
@@ -631,7 +631,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>mongodb_stats[{#MONGO_PORT},cursors, totalOpen]</key>
+                            <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT},cursors, totalOpen]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>30</trends>
@@ -673,7 +673,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>mongodb_stats[{#MONGO_PORT},globalLock, currentQueue, readers]</key>
+                            <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT},globalLock, currentQueue, readers]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>30</trends>
@@ -715,7 +715,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>mongodb_stats[{#MONGO_PORT},globalLock, currentQueue, total]</key>
+                            <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT},globalLock, currentQueue, total]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>30</trends>
@@ -757,7 +757,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>mongodb_stats[{#MONGO_PORT},globalLock, currentQueue, writers]</key>
+                            <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT},globalLock, currentQueue, writers]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>30</trends>
@@ -799,14 +799,14 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>mongodb_stats[{#MONGO_PORT},indexCounters, missRatio]</key>
+                            <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT},indexCounters, missRatio]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>30</trends>
                             <status>0</status>
-                            <value_type>3</value_type>
+                            <value_type>0</value_type>
                             <allowed_hosts/>
-                            <units/>
+                            <units>％</units>
                             <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
@@ -841,7 +841,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>mongodb_stats[{#MONGO_PORT},indexCounters, accesses]</key>
+                            <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT},indexCounters, accesses]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>30</trends>
@@ -883,7 +883,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>mongodb_stats[{#MONGO_PORT},indexCounters, hits]</key>
+                            <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT},indexCounters, hits]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>30</trends>
@@ -925,7 +925,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>mongodb_stats[{#MONGO_PORT},indexCounters, misses]</key>
+                            <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT},indexCounters, misses]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>30</trends>
@@ -967,7 +967,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>mongodb_stats[{#MONGO_PORT}, dur, commitsInWriteLock]</key>
+                            <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT}, dur, commitsInWriteLock]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>15</trends>
@@ -1009,7 +1009,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>mongodb_stats[{#MONGO_PORT}, dur, commits ]</key>
+                            <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT}, dur, commits ]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>15</trends>
@@ -1051,7 +1051,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>mongodb_stats[{#MONGO_PORT}, dur, writeToDataFilesMB]</key>
+                            <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT}, dur, writeToDataFilesMB]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>15</trends>
@@ -1093,7 +1093,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>mongodb_stats[{#MONGO_PORT}, dur, timeMs, writeToDataFiles]</key>
+                            <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT}, dur, timeMs, writeToDataFiles]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>15</trends>
@@ -1135,7 +1135,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>mongodb_stats[{#MONGO_PORT}, dur, earlyCommits]</key>
+                            <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT}, dur, earlyCommits]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>15</trends>
@@ -1177,7 +1177,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>mongodb_stats[{#MONGO_PORT}, dur, journaledMB]</key>
+                            <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT}, dur, journaledMB]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>15</trends>
@@ -1219,7 +1219,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>mongodb_stats[{#MONGO_PORT}, dur, timeMs, writeToJournal]</key>
+                            <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT}, dur, timeMs, writeToJournal]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>15</trends>
@@ -1261,7 +1261,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>mongodb_stats[{#MONGO_PORT}, dur, timeMs, prepLogBuffer]</key>
+                            <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT}, dur, timeMs, prepLogBuffer]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>15</trends>
@@ -1303,7 +1303,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>mongodb_stats[{#MONGO_PORT}, extra_info, heap_usage_bytes]</key>
+                            <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT}, extra_info, heap_usage_bytes]</key>
                             <delay>600</delay>
                             <history>15</history>
                             <trends>30</trends>
@@ -1345,7 +1345,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>mongodb_stats[{#MONGO_PORT}, mem, bits]</key>
+                            <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT}, mem, bits]</key>
                             <delay>3600</delay>
                             <history>15</history>
                             <trends>15</trends>
@@ -1387,7 +1387,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>mongodb_stats[{#MONGO_PORT}, extra_info, page_faults]</key>
+                            <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT}, extra_info, page_faults]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>30</trends>
@@ -1429,7 +1429,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>mongodb_stats[{#MONGO_PORT}, mem, resident]</key>
+                            <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT}, mem, resident]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>15</trends>
@@ -1471,7 +1471,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>mongodb_stats[{#MONGO_PORT}, mem, virtual]</key>
+                            <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT}, mem, virtual]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>15</trends>
@@ -1513,7 +1513,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>mongodb_stats[{#MONGO_PORT}, network, bytesIn]</key>
+                            <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT}, network, bytesIn]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>15</trends>
@@ -1555,7 +1555,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>mongodb_stats[{#MONGO_PORT}, network, bytesOut]</key>
+                            <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT}, network, bytesOut]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>15</trends>
@@ -1597,7 +1597,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>mongodb_stats[{#MONGO_PORT}, network, numRequests]</key>
+                            <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT}, network, numRequests]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>15</trends>
@@ -1639,7 +1639,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>mongodb_stats[{#MONGO_PORT}, opcounters, command]</key>
+                            <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT}, opcounters, command]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>15</trends>
@@ -1681,7 +1681,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>mongodb_stats[{#MONGO_PORT}, opcounters, delete]</key>
+                            <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT}, opcounters, delete]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>15</trends>
@@ -1723,7 +1723,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>mongodb_stats[{#MONGO_PORT}, opcounters, getmore]</key>
+                            <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT}, opcounters, getmore]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>15</trends>
@@ -1765,7 +1765,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>mongodb_stats[{#MONGO_PORT}, opcounters, insert]</key>
+                            <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT}, opcounters, insert]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>15</trends>
@@ -1807,7 +1807,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>mongodb_stats[{#MONGO_PORT}, opcounters, query]</key>
+                            <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT}, opcounters, query]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>15</trends>
@@ -1849,7 +1849,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>mongodb_stats[{#MONGO_PORT}, opcounters, update]</key>
+                            <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT}, opcounters, update]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>15</trends>
@@ -1915,7 +1915,7 @@
                                     <type>0</type>
                                     <item>
                                         <host>Template_app_mongodb</host>
-                                        <key>mongodb_stats[{#MONGO_PORT}, opcounters, command]</key>
+                                        <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT}, opcounters, command]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
@@ -1927,7 +1927,7 @@
                                     <type>0</type>
                                     <item>
                                         <host>Template_app_mongodb</host>
-                                        <key>mongodb_stats[{#MONGO_PORT}, opcounters, delete]</key>
+                                        <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT}, opcounters, delete]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
@@ -1939,7 +1939,7 @@
                                     <type>0</type>
                                     <item>
                                         <host>Template_app_mongodb</host>
-                                        <key>mongodb_stats[{#MONGO_PORT}, opcounters, getmore]</key>
+                                        <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT}, opcounters, getmore]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
@@ -1951,7 +1951,7 @@
                                     <type>0</type>
                                     <item>
                                         <host>Template_app_mongodb</host>
-                                        <key>mongodb_stats[{#MONGO_PORT}, opcounters, insert]</key>
+                                        <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT}, opcounters, insert]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
@@ -1963,7 +1963,7 @@
                                     <type>0</type>
                                     <item>
                                         <host>Template_app_mongodb</host>
-                                        <key>mongodb_stats[{#MONGO_PORT}, opcounters, query]</key>
+                                        <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT}, opcounters, query]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
@@ -1975,7 +1975,63 @@
                                     <type>0</type>
                                     <item>
                                         <host>Template_app_mongodb</host>
-                                        <key>mongodb_stats[{#MONGO_PORT}, opcounters, update]</key>
+                                        <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT}, opcounters, update]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                        <graph_prototype>
+                            <name>Mongo {#MONGO_PORT} Index Effectiveness: Btree Statictics</name>
+                            <width>900</width>
+                            <height>200</height>
+                            <yaxismin>0.0000</yaxismin>
+                            <yaxismax>100.0000</yaxismax>
+                            <show_work_period>1</show_work_period>
+                            <show_triggers>1</show_triggers>
+                            <type>0</type>
+                            <show_legend>1</show_legend>
+                            <show_3d>0</show_3d>
+                            <percent_left>0.0000</percent_left>
+                            <percent_right>0.0000</percent_right>
+                            <ymin_type_1>0</ymin_type_1>
+                            <ymax_type_1>0</ymax_type_1>
+                            <ymin_item_1>0</ymin_item_1>
+                            <ymax_item_1>0</ymax_item_1>
+                            <graph_items>
+                                <graph_item>
+                                    <sortorder>0</sortorder>
+                                    <drawtype>0</drawtype>
+                                    <color>00C800</color>
+                                    <yaxisside>0</yaxisside>
+                                    <calc_fnc>2</calc_fnc>
+                                    <type>0</type>
+                                    <item>
+                                        <host>Template_app_mongodb</host>
+                                        <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT},indexCounters, accesses]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>1</sortorder>
+                                    <drawtype>0</drawtype>
+                                    <color>0000CC</color>
+                                    <yaxisside>0</yaxisside>
+                                    <calc_fnc>2</calc_fnc>
+                                    <type>0</type>
+                                    <item>
+                                        <host>Template_app_mongodb</host>
+                                        <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT},indexCounters, hits]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>2</sortorder>
+                                    <drawtype>0</drawtype>
+                                    <color>FF3366</color>
+                                    <yaxisside>0</yaxisside>
+                                    <calc_fnc>2</calc_fnc>
+                                    <type>0</type>
+                                    <item>
+                                        <host>Template_app_mongodb</host>
+                                        <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT},indexCounters, misses]</key>
                                     </item>
                                 </graph_item>
                             </graph_items>
@@ -2007,63 +2063,7 @@
                                     <type>0</type>
                                     <item>
                                         <host>Template_app_mongodb</host>
-                                        <key>mongodb_stats[{#MONGO_PORT},indexCounters, missRatio]</key>
-                                    </item>
-                                </graph_item>
-                            </graph_items>
-                        </graph_prototype>
-                        <graph_prototype>
-                            <name>Mongo {#MONGO_PORT} Index Effectiveness Btree Statictics</name>
-                            <width>900</width>
-                            <height>200</height>
-                            <yaxismin>0.0000</yaxismin>
-                            <yaxismax>100.0000</yaxismax>
-                            <show_work_period>1</show_work_period>
-                            <show_triggers>1</show_triggers>
-                            <type>0</type>
-                            <show_legend>1</show_legend>
-                            <show_3d>0</show_3d>
-                            <percent_left>0.0000</percent_left>
-                            <percent_right>0.0000</percent_right>
-                            <ymin_type_1>0</ymin_type_1>
-                            <ymax_type_1>0</ymax_type_1>
-                            <ymin_item_1>0</ymin_item_1>
-                            <ymax_item_1>0</ymax_item_1>
-                            <graph_items>
-                                <graph_item>
-                                    <sortorder>0</sortorder>
-                                    <drawtype>0</drawtype>
-                                    <color>00C800</color>
-                                    <yaxisside>0</yaxisside>
-                                    <calc_fnc>2</calc_fnc>
-                                    <type>0</type>
-                                    <item>
-                                        <host>Template_app_mongodb</host>
-                                        <key>mongodb_stats[{#MONGO_PORT},indexCounters, accesses]</key>
-                                    </item>
-                                </graph_item>
-                                <graph_item>
-                                    <sortorder>1</sortorder>
-                                    <drawtype>0</drawtype>
-                                    <color>0000CC</color>
-                                    <yaxisside>0</yaxisside>
-                                    <calc_fnc>2</calc_fnc>
-                                    <type>0</type>
-                                    <item>
-                                        <host>Template_app_mongodb</host>
-                                        <key>mongodb_stats[{#MONGO_PORT},indexCounters, hits]</key>
-                                    </item>
-                                </graph_item>
-                                <graph_item>
-                                    <sortorder>2</sortorder>
-                                    <drawtype>0</drawtype>
-                                    <color>FF3366</color>
-                                    <yaxisside>0</yaxisside>
-                                    <calc_fnc>2</calc_fnc>
-                                    <type>0</type>
-                                    <item>
-                                        <host>Template_app_mongodb</host>
-                                        <key>mongodb_stats[{#MONGO_PORT},indexCounters, misses]</key>
+                                        <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT},indexCounters, missRatio]</key>
                                     </item>
                                 </graph_item>
                             </graph_items>
@@ -2095,7 +2095,7 @@
                                     <type>0</type>
                                     <item>
                                         <host>Template_app_mongodb</host>
-                                        <key>mongodb_stats[{#MONGO_PORT}, dur, commitsInWriteLock]</key>
+                                        <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT}, dur, commitsInWriteLock]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
@@ -2107,7 +2107,7 @@
                                     <type>0</type>
                                     <item>
                                         <host>Template_app_mongodb</host>
-                                        <key>mongodb_stats[{#MONGO_PORT}, dur, commits ]</key>
+                                        <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT}, dur, commits ]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
@@ -2119,7 +2119,7 @@
                                     <type>0</type>
                                     <item>
                                         <host>Template_app_mongodb</host>
-                                        <key>mongodb_stats[{#MONGO_PORT}, dur, earlyCommits]</key>
+                                        <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT}, dur, earlyCommits]</key>
                                     </item>
                                 </graph_item>
                             </graph_items>
@@ -2151,7 +2151,7 @@
                                     <type>0</type>
                                     <item>
                                         <host>Template_app_mongodb</host>
-                                        <key>mongodb_stats[{#MONGO_PORT}, dur, timeMs, writeToDataFiles]</key>
+                                        <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT}, dur, timeMs, writeToDataFiles]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
@@ -2163,7 +2163,7 @@
                                     <type>0</type>
                                     <item>
                                         <host>Template_app_mongodb</host>
-                                        <key>mongodb_stats[{#MONGO_PORT}, dur, timeMs, writeToJournal]</key>
+                                        <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT}, dur, timeMs, writeToJournal]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
@@ -2175,7 +2175,7 @@
                                     <type>0</type>
                                     <item>
                                         <host>Template_app_mongodb</host>
-                                        <key>mongodb_stats[{#MONGO_PORT}, dur, timeMs, prepLogBuffer]</key>
+                                        <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT}, dur, timeMs, prepLogBuffer]</key>
                                     </item>
                                 </graph_item>
                             </graph_items>
@@ -2207,7 +2207,7 @@
                                     <type>0</type>
                                     <item>
                                         <host>Template_app_mongodb</host>
-                                        <key>mongodb_stats[{#MONGO_PORT}, dur, writeToDataFilesMB]</key>
+                                        <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT}, dur, writeToDataFilesMB]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
@@ -2219,7 +2219,7 @@
                                     <type>0</type>
                                     <item>
                                         <host>Template_app_mongodb</host>
-                                        <key>mongodb_stats[{#MONGO_PORT}, dur, journaledMB]</key>
+                                        <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT}, dur, journaledMB]</key>
                                     </item>
                                 </graph_item>
                             </graph_items>
@@ -2251,7 +2251,7 @@
                                     <type>0</type>
                                     <item>
                                         <host>Template_app_mongodb</host>
-                                        <key>mongodb_stats[{#MONGO_PORT}, extra_info, heap_usage_bytes]</key>
+                                        <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT}, extra_info, heap_usage_bytes]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
@@ -2263,7 +2263,7 @@
                                     <type>0</type>
                                     <item>
                                         <host>Template_app_mongodb</host>
-                                        <key>mongodb_stats[{#MONGO_PORT}, mem, resident]</key>
+                                        <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT}, mem, resident]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
@@ -2275,7 +2275,7 @@
                                     <type>0</type>
                                     <item>
                                         <host>Template_app_mongodb</host>
-                                        <key>mongodb_stats[{#MONGO_PORT}, mem, virtual]</key>
+                                        <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT}, mem, virtual]</key>
                                     </item>
                                 </graph_item>
                             </graph_items>
@@ -2307,7 +2307,7 @@
                                     <type>0</type>
                                     <item>
                                         <host>Template_app_mongodb</host>
-                                        <key>mongodb_stats[{#MONGO_PORT}, network, bytesIn]</key>
+                                        <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT}, network, bytesIn]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
@@ -2319,7 +2319,7 @@
                                     <type>0</type>
                                     <item>
                                         <host>Template_app_mongodb</host>
-                                        <key>mongodb_stats[{#MONGO_PORT}, network, bytesOut]</key>
+                                        <key>mongodb_stats[{#MONGO_IPADDR},{#MONGO_PORT}, network, bytesOut]</key>
                                     </item>
                                 </graph_item>
                             </graph_items>

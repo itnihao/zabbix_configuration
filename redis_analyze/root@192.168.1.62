@@ -1,2 +1,0 @@
-UserParameter=redis_stats[*],/usr/local/zabbix/libexec/redis_monitor.sh localhost $1 |grep -w $2|awk -F ':' '{print $$2}'
-UserParameter=memcached_port_discovery,/usr/local/zabbix/libexec/redis_discovery.py

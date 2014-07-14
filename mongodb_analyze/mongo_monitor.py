@@ -9,12 +9,14 @@ def url_encode(port):
 	return str(int(port) + 1000)
 
 parameters = sys.argv[1:]
-port = parameters[0]
-section = parameters[1]
-key = parameters[2:]
+
+ipaddr = parameters[0]
+port = parameters[1]
+section = parameters[2]
+key = parameters[3:]
 
 # url encode
-url = 'http://localhost:%s/_status' % url_encode(port)
+url = 'http://%s:%s/_status' % (ipaddr, url_encode(port)) 
 
 # json encode
 json_obj = urllib2.urlopen(url, timeout=5).read()

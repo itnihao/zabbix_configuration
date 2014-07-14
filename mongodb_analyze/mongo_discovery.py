@@ -8,13 +8,17 @@ import os
 mongo_conf_dir='/home/mongodb'
 conf_file = [conf_f for conf_f in os.listdir(mongo_conf_dir) if 'conf' in conf_f]
 
-conf_port_list = []
-port_list = []
+para_list = []
+
 
 for conf in conf_file:
+	dict_temp = {}
 	for line in open(os.path.join(mongo_conf_dir, conf)).readlines():
 		if 'port' in line:
-			conf_port_list.append(line.split('=')[1].strip())
+			dict_temp['port'] = line.split('=')[1].strip()
+		if 'bind_ip' in line:
+			dict_temp['ipaddr'] = line.split('=')[1].strip()
+	para_list.append(dict_temp)
 
 
 net_cmd = '''netstat -nltu|awk '{print $4}'
@@ -23,21 +27,17 @@ net_cmd = '''netstat -nltu|awk '{print $4}'
 p = subprocess.Popen(net_cmd, shell=True, stdout=subprocess.PIPE)
 net_result = p.stdout.readlines()
 
-
-
-for port in conf_port_list:
-	for net in net_result:
-		if port.strip() in net:
-			port_list.append(port)
-
 json_data = {"data": []}
 
-for port in port_list:
-        dic_content = {
-        "{#MONGO_PORT}":  port.strip()
-        }
-
-        json_data['data'].append(dic_content)
+for para in para_list:
+	for net in net_result:
+		if para['port'] in net:
+			dic_content = {
+    			"{#MONGO_PORT}"  : para['port'],
+    			"{#MONGO_IPADDR" : para['ipaddr']
+				}
+			
+			json_data['data'].append(dic_content)
 
 result = json.dumps(json_data)
 print result
