@@ -34,7 +34,7 @@ for para in para_list:
 		if para['port'] in net:
 			dic_content = {
     			"{#MONGO_PORT}"  : para['port'],
-    			"{#MONGO_IPADDR" : para['ipaddr']
+    			"{#MONGO_IPADDR}" : para['ipaddr']
 				}
 			
 			json_data['data'].append(dic_content)

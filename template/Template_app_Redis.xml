@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>2.0</version>
-    <date>2014-05-15T05:57:26Z</date>
+    <date>2014-07-14T08:15:11Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -76,7 +76,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>redis_stats[{#REDIS_PORT}, client_biggest_input_buf]</key>
+                            <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, client_biggest_input_buf]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>15</trends>
@@ -118,7 +118,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>redis_stats[{#REDIS_PORT}, blocked_clients]</key>
+                            <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, blocked_clients]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>15</trends>
@@ -160,7 +160,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>redis_stats[{#REDIS_PORT}, connected_clients]</key>
+                            <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, connected_clients]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>15</trends>
@@ -202,7 +202,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>redis_stats[{#REDIS_PORT}, client_longest_output_list]</key>
+                            <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, client_longest_output_list]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>15</trends>
@@ -244,7 +244,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>redis_stats[{#REDIS_PORT}, used_cpu_sys]</key>
+                            <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, used_cpu_sys]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>15</trends>
@@ -286,7 +286,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>redis_stats[{#REDIS_PORT}, used_cpu_sys_children]</key>
+                            <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, used_cpu_sys_children]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>15</trends>
@@ -328,7 +328,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>redis_stats[{#REDIS_PORT}, used_cpu_user]</key>
+                            <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, used_cpu_user]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>15</trends>
@@ -370,7 +370,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>redis_stats[{#REDIS_PORT}, used_cpu_user_children]</key>
+                            <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, used_cpu_user_children]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>15</trends>
@@ -412,7 +412,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>redis_stats[{#REDIS_PORT}, used_memory]</key>
+                            <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, used_memory]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>15</trends>
@@ -454,7 +454,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>redis_stats[{#REDIS_PORT}, used_memory_lua]</key>
+                            <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, used_memory_lua]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>15</trends>
@@ -496,7 +496,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>redis_stats[{#REDIS_PORT}, used_memory_peak]</key>
+                            <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, used_memory_peak]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>15</trends>
@@ -538,7 +538,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>redis_stats[{#REDIS_PORT}, used_memory_rss]</key>
+                            <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, used_memory_rss]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>15</trends>
@@ -580,7 +580,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>redis_stats[{#REDIS_PORT}, mem_fragmentation_ratio]</key>
+                            <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, mem_fragmentation_ratio]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>15</trends>
@@ -668,7 +668,7 @@ When Redis frees memory, the memory is given back to the allocator, and the allo
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>redis_stats[{#REDIS_PORT}, instantaneous_ops_per_sec]</key>
+                            <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, instantaneous_ops_per_sec]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>15</trends>
@@ -710,7 +710,7 @@ When Redis frees memory, the memory is given back to the allocator, and the allo
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>redis_stats[{#REDIS_PORT}, keyspace_hits]</key>
+                            <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, keyspace_hits]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>15</trends>
@@ -752,7 +752,7 @@ When Redis frees memory, the memory is given back to the allocator, and the allo
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>redis_stats[{#REDIS_PORT}, keyspace_misses]</key>
+                            <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, keyspace_misses]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>15</trends>
@@ -794,7 +794,7 @@ When Redis frees memory, the memory is given back to the allocator, and the allo
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>redis_stats[{#REDIS_PORT}, evicted_keys]</key>
+                            <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, evicted_keys]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>15</trends>
@@ -836,7 +836,7 @@ When Redis frees memory, the memory is given back to the allocator, and the allo
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>redis_stats[{#REDIS_PORT}, expired_keys]</key>
+                            <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, expired_keys]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>15</trends>
@@ -878,7 +878,7 @@ When Redis frees memory, the memory is given back to the allocator, and the allo
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>redis_stats[{#REDIS_PORT}, hits_percent]</key>
+                            <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, hits_percent]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>15</trends>
@@ -886,7 +886,7 @@ When Redis frees memory, the memory is given back to the allocator, and the allo
                             <value_type>0</value_type>
                             <allowed_hosts/>
                             <units>%</units>
-                            <delta>1</delta>
+                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -896,7 +896,7 @@ When Redis frees memory, the memory is given back to the allocator, and the allo
                             <snmpv3_privpassphrase/>
                             <formula>1</formula>
                             <delay_flex/>
-                            <params>100*last(&quot;redis_stats[{#REDIS_PORT}, keyspace_hits]&quot;,0)/( last(&quot;redis_stats[{#REDIS_PORT}, keyspace_hits]&quot;,0) + last(&quot;redis_stats[{#REDIS_PORT}, keyspace_misses]&quot;, 0))</params>
+                            <params>100*last(&quot;redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, keyspace_hits]&quot;,0)/(last(&quot;redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, keyspace_hits]&quot;,0)+last(&quot;redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, keyspace_misses]&quot;,0))</params>
                             <ipmi_sensor/>
                             <data_type>0</data_type>
                             <authtype>0</authtype>
@@ -920,7 +920,7 @@ When Redis frees memory, the memory is given back to the allocator, and the allo
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>redis_stats[{#REDIS_PORT}, rejected_connections]</key>
+                            <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, rejected_connections]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>15</trends>
@@ -962,7 +962,7 @@ When Redis frees memory, the memory is given back to the allocator, and the allo
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>redis_stats[{#REDIS_PORT}, total_commands_processed]</key>
+                            <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, total_commands_processed]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>15</trends>
@@ -1004,7 +1004,7 @@ When Redis frees memory, the memory is given back to the allocator, and the allo
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>redis_stats[{#REDIS_PORT}, total_connections_received]</key>
+                            <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, total_connections_received]</key>
                             <delay>60</delay>
                             <history>15</history>
                             <trends>15</trends>
@@ -1070,7 +1070,7 @@ When Redis frees memory, the memory is given back to the allocator, and the allo
                                     <type>0</type>
                                     <item>
                                         <host>Template_app_Redis</host>
-                                        <key>redis_stats[{#REDIS_PORT}, client_biggest_input_buf]</key>
+                                        <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, client_biggest_input_buf]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
@@ -1082,7 +1082,7 @@ When Redis frees memory, the memory is given back to the allocator, and the allo
                                     <type>0</type>
                                     <item>
                                         <host>Template_app_Redis</host>
-                                        <key>redis_stats[{#REDIS_PORT}, blocked_clients]</key>
+                                        <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, blocked_clients]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
@@ -1094,7 +1094,7 @@ When Redis frees memory, the memory is given back to the allocator, and the allo
                                     <type>0</type>
                                     <item>
                                         <host>Template_app_Redis</host>
-                                        <key>redis_stats[{#REDIS_PORT}, connected_clients]</key>
+                                        <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, connected_clients]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
@@ -1106,7 +1106,7 @@ When Redis frees memory, the memory is given back to the allocator, and the allo
                                     <type>0</type>
                                     <item>
                                         <host>Template_app_Redis</host>
-                                        <key>redis_stats[{#REDIS_PORT}, client_longest_output_list]</key>
+                                        <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, client_longest_output_list]</key>
                                     </item>
                                 </graph_item>
                             </graph_items>
@@ -1138,7 +1138,7 @@ When Redis frees memory, the memory is given back to the allocator, and the allo
                                     <type>0</type>
                                     <item>
                                         <host>Template_app_Redis</host>
-                                        <key>redis_stats[{#REDIS_PORT}, instantaneous_ops_per_sec]</key>
+                                        <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, instantaneous_ops_per_sec]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
@@ -1150,7 +1150,7 @@ When Redis frees memory, the memory is given back to the allocator, and the allo
                                     <type>0</type>
                                     <item>
                                         <host>Template_app_Redis</host>
-                                        <key>redis_stats[{#REDIS_PORT}, total_commands_processed]</key>
+                                        <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, total_commands_processed]</key>
                                     </item>
                                 </graph_item>
                             </graph_items>
@@ -1182,7 +1182,7 @@ When Redis frees memory, the memory is given back to the allocator, and the allo
                                     <type>0</type>
                                     <item>
                                         <host>Template_app_Redis</host>
-                                        <key>redis_stats[{#REDIS_PORT}, rejected_connections]</key>
+                                        <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, rejected_connections]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
@@ -1194,7 +1194,7 @@ When Redis frees memory, the memory is given back to the allocator, and the allo
                                     <type>0</type>
                                     <item>
                                         <host>Template_app_Redis</host>
-                                        <key>redis_stats[{#REDIS_PORT}, total_connections_received]</key>
+                                        <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, total_connections_received]</key>
                                     </item>
                                 </graph_item>
                             </graph_items>
@@ -1226,7 +1226,7 @@ When Redis frees memory, the memory is given back to the allocator, and the allo
                                     <type>0</type>
                                     <item>
                                         <host>Template_app_Redis</host>
-                                        <key>redis_stats[{#REDIS_PORT}, used_cpu_sys]</key>
+                                        <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, used_cpu_sys]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
@@ -1238,7 +1238,7 @@ When Redis frees memory, the memory is given back to the allocator, and the allo
                                     <type>0</type>
                                     <item>
                                         <host>Template_app_Redis</host>
-                                        <key>redis_stats[{#REDIS_PORT}, used_cpu_sys_children]</key>
+                                        <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, used_cpu_sys_children]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
@@ -1250,7 +1250,7 @@ When Redis frees memory, the memory is given back to the allocator, and the allo
                                     <type>0</type>
                                     <item>
                                         <host>Template_app_Redis</host>
-                                        <key>redis_stats[{#REDIS_PORT}, used_cpu_user]</key>
+                                        <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, used_cpu_user]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
@@ -1262,7 +1262,51 @@ When Redis frees memory, the memory is given back to the allocator, and the allo
                                     <type>0</type>
                                     <item>
                                         <host>Template_app_Redis</host>
-                                        <key>redis_stats[{#REDIS_PORT}, used_cpu_user_children]</key>
+                                        <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, used_cpu_user_children]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                        <graph_prototype>
+                            <name>Redis {#REDIS_PORT} Keys hit/miss Statistics</name>
+                            <width>900</width>
+                            <height>200</height>
+                            <yaxismin>0.0000</yaxismin>
+                            <yaxismax>100.0000</yaxismax>
+                            <show_work_period>1</show_work_period>
+                            <show_triggers>1</show_triggers>
+                            <type>0</type>
+                            <show_legend>1</show_legend>
+                            <show_3d>0</show_3d>
+                            <percent_left>0.0000</percent_left>
+                            <percent_right>0.0000</percent_right>
+                            <ymin_type_1>0</ymin_type_1>
+                            <ymax_type_1>0</ymax_type_1>
+                            <ymin_item_1>0</ymin_item_1>
+                            <ymax_item_1>0</ymax_item_1>
+                            <graph_items>
+                                <graph_item>
+                                    <sortorder>0</sortorder>
+                                    <drawtype>5</drawtype>
+                                    <color>00EE00</color>
+                                    <yaxisside>0</yaxisside>
+                                    <calc_fnc>2</calc_fnc>
+                                    <type>0</type>
+                                    <item>
+                                        <host>Template_app_Redis</host>
+                                        <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, keyspace_hits]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>1</sortorder>
+                                    <drawtype>5</drawtype>
+                                    <color>FF3333</color>
+                                    <yaxisside>0</yaxisside>
+                                    <calc_fnc>2</calc_fnc>
+                                    <type>0</type>
+                                    <item>
+                                        <host>Template_app_Redis</host>
+                                        <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, keyspace_misses]</key>
                                     </item>
                                 </graph_item>
                             </graph_items>
@@ -1287,14 +1331,14 @@ When Redis frees memory, the memory is given back to the allocator, and the allo
                             <graph_items>
                                 <graph_item>
                                     <sortorder>0</sortorder>
-                                    <drawtype>0</drawtype>
+                                    <drawtype>5</drawtype>
                                     <color>00BB00</color>
                                     <yaxisside>0</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
                                         <host>Template_app_Redis</host>
-                                        <key>redis_stats[{#REDIS_PORT}, hits_percent]</key>
+                                        <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, hits_percent]</key>
                                     </item>
                                 </graph_item>
                             </graph_items>
@@ -1326,7 +1370,7 @@ When Redis frees memory, the memory is given back to the allocator, and the allo
                                     <type>0</type>
                                     <item>
                                         <host>Template_app_Redis</host>
-                                        <key>redis_stats[{#REDIS_PORT}, evicted_keys]</key>
+                                        <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, evicted_keys]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
@@ -1338,7 +1382,7 @@ When Redis frees memory, the memory is given back to the allocator, and the allo
                                     <type>0</type>
                                     <item>
                                         <host>Template_app_Redis</host>
-                                        <key>redis_stats[{#REDIS_PORT}, expired_keys]</key>
+                                        <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, expired_keys]</key>
                                     </item>
                                 </graph_item>
                             </graph_items>
@@ -1370,7 +1414,7 @@ When Redis frees memory, the memory is given back to the allocator, and the allo
                                     <type>0</type>
                                     <item>
                                         <host>Template_app_Redis</host>
-                                        <key>redis_stats[{#REDIS_PORT}, mem_fragmentation_ratio]</key>
+                                        <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, mem_fragmentation_ratio]</key>
                                     </item>
                                 </graph_item>
                             </graph_items>
@@ -1395,50 +1439,50 @@ When Redis frees memory, the memory is given back to the allocator, and the allo
                             <graph_items>
                                 <graph_item>
                                     <sortorder>2</sortorder>
-                                    <drawtype>5</drawtype>
+                                    <drawtype>2</drawtype>
                                     <color>FF3333</color>
                                     <yaxisside>0</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
                                         <host>Template_app_Redis</host>
-                                        <key>redis_stats[{#REDIS_PORT}, used_memory]</key>
+                                        <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, used_memory]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
                                     <sortorder>0</sortorder>
-                                    <drawtype>5</drawtype>
+                                    <drawtype>2</drawtype>
                                     <color>999933</color>
                                     <yaxisside>0</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
                                         <host>Template_app_Redis</host>
-                                        <key>redis_stats[{#REDIS_PORT}, used_memory_lua]</key>
+                                        <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, used_memory_lua]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
                                     <sortorder>1</sortorder>
-                                    <drawtype>5</drawtype>
+                                    <drawtype>2</drawtype>
                                     <color>FF33CC</color>
                                     <yaxisside>0</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
                                         <host>Template_app_Redis</host>
-                                        <key>redis_stats[{#REDIS_PORT}, used_memory_peak]</key>
+                                        <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, used_memory_peak]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
                                     <sortorder>3</sortorder>
-                                    <drawtype>5</drawtype>
+                                    <drawtype>2</drawtype>
                                     <color>99FF33</color>
                                     <yaxisside>0</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
                                         <host>Template_app_Redis</host>
-                                        <key>redis_stats[{#REDIS_PORT}, used_memory_rss]</key>
+                                        <key>redis_stats[{#REDIS_IPADDR},{#REDIS_PORT}, used_memory_rss]</key>
                                     </item>
                                 </graph_item>
                             </graph_items>

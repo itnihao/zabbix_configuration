@@ -18,16 +18,14 @@ def config_parser(conf, para):
 
 	return result[0]
 
-init_path = '/etc/init.d/'
-redis_init = [init for init in os.listdir(init_path) if 'redis' in init]
+redis_conf_path = '/etc/redis/'
 
 redis_para = []
+redis_conf = [conf for conf in os.listdir(redis_conf_path) if '.conf' in conf]
 
-for init in redis_init:
-	redis_conf = config_parser(os.path.join(init_path, init), 'conf'.upper()).split("=")[1]
-	print redis_conf
-	ipaddr = config_parser(redis_conf, 'bind').split()[1]
-    port   = config_parser(redis_conf, 'port').split()[1]
+for conf in redis_conf:
+    ipaddr = config_parser(os.path.join(redis_conf_path, conf), 'bind').split()[1]
+    port = config_parser(os.path.join(redis_conf_path,conf), 'port').split()[1]
     dict_temp = {'port' : port, 'ipaddr': ipaddr}
     redis_para.append(dict_temp)
 
